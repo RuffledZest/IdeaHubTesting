@@ -3,6 +3,7 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 import HeroMonologue from './components/HeroMonologue'
+import Navbar from './components/Navbar'
 
 function App() {
   // document.body.style.backgroundColor = "black"
@@ -11,7 +12,7 @@ function App() {
     <>
     
     <h1>
-
+      <Navbar />
       <HeroMonologue />
     </h1>
 
