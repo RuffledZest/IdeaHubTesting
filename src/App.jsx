@@ -3,7 +3,10 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 import HeroMonologue from './components/HeroMonologue'
+import Login from './components/Login'
+
 import Navbar from './components/Navbar'
+import Registration from './components/RegistrationPage'
 
 function App() {
   // document.body.style.backgroundColor = "black"
@@ -14,6 +17,9 @@ function App() {
     <h1>
       <Navbar />
       <HeroMonologue />
+      <Login />
+      <Registration />
+     
     </h1>
 
     </>
@@ -21,3 +27,6 @@ function App() {
 }
 
 export default App
+
+
+
