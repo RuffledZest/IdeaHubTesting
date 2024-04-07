@@ -1,8 +1,11 @@
 function LandingPage() {
   return (
-    <div>
-      <h1>Welcome to the Landing Page</h1>
-    </div>
+    // <div style={{
+    //   position: "absolute",
+    // }}>
+    //   <img src="public\assets\Pattern3forIdeaHubLandingpage.png" alt="" />
+    // </div>
+    <div>This is testing</div>
   );
 }
 

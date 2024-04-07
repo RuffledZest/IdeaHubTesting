@@ -44,7 +44,7 @@ function HeroMonologue() {
       </section>
       <div className="flex gap-4 justify-center mt-8 text-base font-bold leading-4 text-white">
         <Button>
-        <div className="button transition duration-2000 hover:scale-95"><Link to="/login"><div className="overflow-hidden relative flex-col justify-center px-9 py-3 aspect-[3.25] max-md:px-5">
+        <div className="button transition duration-2000 hover:scale-95"><Link to="/signup"><div className="overflow-hidden relative flex-col justify-center px-9 py-3 aspect-[3.25] max-md:px-5">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/4615376fef31c3dfad08eef828ec7b3956c0d4999092429a2d4cc0d7e2315dc5?apiKey=dadde3c8bb91485ea6a1326748697be7&"
@@ -56,7 +56,7 @@ function HeroMonologue() {
           
         </Button>
         <Button>
-        <div className="button transition duration-2000 hover:scale-95 bg-blue-800 rounded-lg"><Link to="/signup"><div className="overflow-hidden relative flex-col justify-center px-9 py-3 aspect-[3.25] max-md:px-5">
+        <div className="button transition duration-2000 hover:scale-95 bg-blue-800 rounded-lg"><Link to="/login"><div className="overflow-hidden relative flex-col justify-center px-9 py-3 aspect-[3.25] max-md:px-5">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/4615376fef31c3dfad08eef828ec7b3956c0d4999092429a2d4cc0d7e2315dc5?apiKey=dadde3c8bb91485ea6a1326748697be7&"
@@ -69,6 +69,12 @@ function HeroMonologue() {
         </Button>
         {/* <LoginButton /> */}
       </div>
+      <div style={{
+      position: "absolute",
+      zIndex:"-1",
+    }}>
+      <img src="public\assets\Pattern3forIdeaHubLandingpage.png" alt="" />
+    </div>
     </main>
   );
 }

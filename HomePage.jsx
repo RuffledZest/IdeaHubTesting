@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from './src/components/Navbar';
 import HeroMonologue from './src/components/HeroMonologue';
+import LandingPage from './src/Pages/LandingPage';
 
 
 function HomePage(){
@@ -9,6 +10,7 @@ function HomePage(){
     <>
       <Navbar/>
       <HeroMonologue/>
+      <LandingPage/>
     </>
   ) 
 }
