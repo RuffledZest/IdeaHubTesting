@@ -73,7 +73,7 @@ function HeroMonologue() {
       position: "absolute",
       zIndex:"-1",
     }}>
-      <img src="public\assets\Pattern3forIdeaHubLandingpage.png" alt="" />
+      <img src="/assets/Pattern3forIdeaHubLandingpage.png" alt="" />
     </div>
     </main>
   );
