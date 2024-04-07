@@ -1,4 +1,7 @@
 import * as React from "react";
+import { Link } from 'react-router-dom';
+
+
 
 function Button({ children }) {
   return (
@@ -8,24 +11,24 @@ function Button({ children }) {
   );
 }
 
-function LoginButton() {
-  return (
-    <div className="justify-center px-5 py-3 whitespace-nowrap rounded-xl border border-red-100 border-solid backdrop-blur-[2px]">
-      Login
-    </div>
-  );
-}
+// function LoginButton() {
+//   return (
+//     <div className="justify-center px-5 py-3 whitespace-nowrap rounded-xl border border-red-100 border-solid backdrop-blur-[2px]">
+//       Login
+//     </div>
+//   );
+// }
 
 function HeroMonologue() {
   return (
-    <main className="flex flex-col items-center max-w-[992px]">
+    <main className="flex flex-col items-center w-screen">
       <div className="flex flex-col justify-center max-w-full text-sm leading-4 border border-blue-700 border-solid shadow-md bg-zinc-950 rounded-[38px] text-slate-300 w-[140px]">
         <div className="overflow-hidden justify-center px-8 py-1.5 max-md:px-5">
           Begin Here
         </div>
       </div>
       <section className="flex flex-col items-center self-stretch px-7 mt-2 w-full text-center max-md:px-5 max-md:max-w-full">
-        <h1 className="self-stretch text-6xl font-semibold bg-clip-text leading-[72px] max-md:max-w-full max-md:text-4xl max-md:leading-[53px]">
+        <h1 className=" text-white self-stretch text-6xl font-semibold bg-clip-text leading-[72px] max-md:max-w-full max-md:text-4xl max-md:leading-[53px]">
           Your Idea is what makes you unique
         </h1>
         <img
@@ -41,7 +44,7 @@ function HeroMonologue() {
       </section>
       <div className="flex gap-4 justify-center mt-8 text-base font-bold leading-4 text-white">
         <Button>
-          <div className="overflow-hidden relative flex-col justify-center px-9 py-3 aspect-[3.25] max-md:px-5">
+        <div className="button transition duration-2000 hover:scale-95"><Link to="/login"><div className="overflow-hidden relative flex-col justify-center px-9 py-3 aspect-[3.25] max-md:px-5">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/4615376fef31c3dfad08eef828ec7b3956c0d4999092429a2d4cc0d7e2315dc5?apiKey=dadde3c8bb91485ea6a1326748697be7&"
@@ -49,9 +52,22 @@ function HeroMonologue() {
               className="object-cover absolute inset-0 size-full"
             />{" "}
             Join us{" "}
-          </div>
+          </div></Link></div>
+          
         </Button>
-        <LoginButton />
+        <Button>
+        <div className="button transition duration-2000 hover:scale-95 bg-blue-800 rounded-lg"><Link to="/signup"><div className="overflow-hidden relative flex-col justify-center px-9 py-3 aspect-[3.25] max-md:px-5">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4615376fef31c3dfad08eef828ec7b3956c0d4999092429a2d4cc0d7e2315dc5?apiKey=dadde3c8bb91485ea6a1326748697be7&"
+              alt=""
+              className="object-cover absolute inset-0 size-full"
+            />{" "}
+            Login{" "}
+          </div></Link></div>
+          
+        </Button>
+        {/* <LoginButton /> */}
       </div>
     </main>
   );

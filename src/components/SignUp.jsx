@@ -1,4 +1,4 @@
-function Login() {
+function SignUp() {
     return (
         <>
             <section className="bg-gray-50 dark:bg-gray-900">
@@ -25,6 +25,11 @@ function Login() {
                             <form className="space-y-4 md:space-y-6" action="#">
 
                                 <div className="flex items-center justify-center">
+
+
+                                    {/* The toggle button is here */}
+
+
 
                                     <label className="inline-flex items-center cursor-pointer">
                                         <input type="checkbox" value="" className="sr-only peer"/>
@@ -56,4 +61,4 @@ function Login() {
     )
 }
 
-export default Login
+export default SignUp

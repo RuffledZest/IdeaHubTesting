@@ -1,32 +1,36 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
-import HeroMonologue from './components/HeroMonologue'
-import Login from './components/Login'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Navbar from './components/Navbar'
-import Registration from './components/RegistrationPage'
+
+import HomePage from "../HomePage";
+import LoginPage from "./Pages/LoginPage";
+import DashboardInn from "./Pages/DashboardInn";
+import DashboardInv from "./Pages/DashboardInv";
+import SignupPage from "./Pages/SignupPage";
+
+
 
 function App() {
-  // document.body.style.backgroundColor = "black"
-
-  return (
-    <>
+  return <BrowserRouter>
     
-    <h1>
-      <Navbar />
-      <HeroMonologue />
-      <Login />
-      <Registration />
-     
-    </h1>
+    <Routes>
 
-    </>
-  )
+      <Route path="/" element={<HomePage/>} />
+      <Route path="/login" element={<LoginPage/>} />
+      <Route path="/dashboardInnovator" element={<DashboardInn/>} />
+      <Route path="/dashboardInvestor" element={<DashboardInv/>} />
+      <Route path="/signup" element={<SignupPage/>} />
+      <Route path="*" element={<div>404 Not Found</div>} />
+
+
+
+    </Routes>
+
+
+
+
+  </BrowserRouter>
+
 }
 
-export default App
 
-
-
+export default App;
