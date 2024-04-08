@@ -7,6 +7,8 @@ import DashboardInn from "./Pages/DashboardInn";
 import DashboardInv from "./Pages/DashboardInv";
 import SignupPage from "./Pages/SignupPage";
 
+import RegistrationPage from "./Pages/RegistrationPage";
+
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
       <Route path="/dashboardInnovator" element={<DashboardInn/>} />
       <Route path="/dashboardInvestor" element={<DashboardInv/>} />
       <Route path="/signup" element={<SignupPage/>} />
+      <Route path="/post" element={<RegistrationPage/>} />
       <Route path="*" element={<div>404 Not Found</div>} />
 
 
