@@ -21,6 +21,7 @@ function DashboardInn() {
       zIndex:"-1",
     }}>
       <img src="/assets/Pattern3forIdeaHubLandingpage.png " className="text-white opacity-45 mb-36"  alt="" />
+      
     </div>
     <div className="flex justify-center items-center  ">
       <div className="max-w-screen-md ">
