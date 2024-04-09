@@ -1,160 +1,114 @@
-function Submission(){
-
-
-
+function Submission() {
     return (
         <>
-        <section className="text-white">
-            <div>
+            <div className="  bg-white h-full w-full flex flex-col">
 
-            {/* <div>
-                <h1 className="text-center text-6xl">Submit your Idea</h1>
+                <div className="text-center">
+                    <h1 className="text-center text-6xl"> Submit your Idea</h1>
+                    <br></br>
+                    <p>Enter all the fields</p>
+                </div>
                 <br></br>
-                <p className="text-center">Please fill out all the fields</p>
-            </div> */}
+                <br></br>
 
-            {/* form */}
-            <div className="">
-                
 
+                {/* Form */}
+                <div className="flex justify-between">
+                    <div className=" h-full w-1/2 bg-white mx-10 flex flex-col gap-12">
+                        <div>
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
+                            <input type="text" name="title" id="title" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Title" required="" />
+
+                        </div>
+
+                        <div>
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Idea Description</label>
+                            <input type="text" name="description" id="description" className="h-44 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Description" required="" />
+                        </div>
+
+
+                        {/* Technology Tags Used Selection list: */}
+                        <div className="text-black">
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Technology Tags Used</label>
+                            <label htmlFor="cars">Choose a car:</label>
+
+                            <select name="cars" id="cars">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+
+
+                        {/* idea category */}
+                        <div>
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Idea Category</label>
+                            <input type="text" name="category" id="category" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Category" required="" />
+                        </div>
+                    </div>
+
+
+
+
+                    <div className="w-1/2 h-full bg-white mx-10 flex flex-col gap-12 ">
+                        {/* make a retangular box like input field of type file with full parent's width and height 1/2 of width, the box should have a big Plus sign indicating user to select and upload a file style this input field as required */}
+                        <div>
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Upload File</label>
+                            <input type="file" name="file" id="file" className="bg-gray-50 border border-gray-300 text-gray-900 h-32 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Upload File" required="" />
+                        </div>
+
+
+                        {/* Intellectual property status section: Ask innovators to indicate the IP status of their idea (e.g., "Patented", "Patent Pending", "Unpatented").Provide guidance or links to resources on IP protection for those who are unsure. style this input field as checkboxes and style them as required */}
+                        <div className="text-black">
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Intellectual Property Status</label>
+                            <div className="flex">
+
+                                <label>Patented</label>
+                                <input type="checkbox" name="patented" id="patented" className=" bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Patented" required="" />
+                            </div>
+
+                            <div className="flex w-full">
+                                <label>Pending</label>
+                                <input type="checkbox" name="patentpending" id="patentpending" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Patent Pending" required="" />
+                            </div>
+
+                            <div className="flex">
+                                <label>Unpatented</label>
+                                <input type="checkbox" name="unpatented" id="unpatented" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Unpatented" required="" />
+
+                            </div>
+
+                        </div>
+
+                        {/* innovators information, here ask three inputs such as full name, email address, linkedin profile link */}
+                        <div>
+
+                            <div>
+                                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
+                                <input type="text" name="fullname" id="fullname" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Full Name" required="" />
+                                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Address</label>
+                                <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email Address" required="" />
+                                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">LinkedIn Profile Link</label>
+                                <input type="text" name="linkedin" id="linkedin" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="LinkedIn Profile Link" required="" />
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                    
+                    <div className="text-center my-20">
+                        <button type="submit" className="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Submit</button>
+                    </div>
             </div>
-            </div>
-
-        </section>
         </>
     )
 }
 
 
-export default Submission
 
-
-// function Registration() {
-//     return (
-//         <>
-//         <div style={{
-//             position: "absolute",
-      
-//       zIndex:"-1",
-//     }}>
-//       <img src="/assets/Pattern3forIdeaHubLandingpage.png" alt="" />
-//     </div>
-//             <div className="min-h-screen p-6  flex items-center justify-center">
-//                 <div className="container max-w-screen-lg mx-auto">
-//                     <div>
-                        
-
-//                         <div className="bg-[#3346bdae] rounded shadow-lg p-4 px-4 md:p-8 mb-6 ">
-//                             <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
-//                                 <div className="text-gray-600">
-//                                     <p className="font-medium text-lg text-white">Idea Details</p>
-//                                     <p className="text-white">Please fill out all the fields.</p>
-//                                 </div>
-
-//                                 <div className="lg:col-span-2">
-//                                     <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
-//                                         <div className="md:col-span-5">
-//                                             <label htmlFor="full_name"className="text-white">Project Idea</label>
-//                                             <input type="text" name="full_name" id="full_name" className="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
-//                                         </div>
-
-//                                         <div className="md:col-span-5">
-//                                             <label htmlFor="email"className="text-white">Idea Description</label>
-//                                             <input type="text" name="email" id="email" className="h-40  border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="explain the Idea in about 500-1000 characters" />
-//                                         </div>
-
-//                                         <div className="md:col-span-3">
-//                                             <label htmlFor="address"className="text-white">Technology Tags</label>
-//                                             <input type="text" name="address" id="address" className="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-//                                         </div>
-
-//                                         <div className="md:col-span-2">
-//                                             <label htmlFor="city"className="text-white">Idea Category</label>
-//                                             <input type="text" name="city" id="city" className="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-//                                         </div>
-
-//                                         <div className="md:col-span-2">
-//                                             <label htmlFor="country"className="text-white">Prototype/Demo Link</label>
-//                                             <div className="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-//                                                 <input name="country" id="country" placeholder="Country" className="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
-//                                                 <button tabIndex="-1" className="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
-//                                                     <svg className="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-//                                                         <line x1="18" y1="6" x2="6" y2="18"></line>
-//                                                         <line x1="6" y1="6" x2="18" y2="18"></line>
-//                                                     </svg>
-//                                                 </button>
-//                                                 <button tabIndex="-1" htmlFor="show_more" className="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
-//                                                     <svg className="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-//                                                 </button>
-//                                             </div>
-//                                         </div>
-
-//                                         <div className="md:col-span-2">
-//                                             <label htmlFor="state"className="text-white">Innovator's Information</label>
-//                                             <div className="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-//                                                 <input name="state" id="state" placeholder="State" className="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
-//                                                 <button tabIndex="-1" className="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
-//                                                     <svg className="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-//                                                         <line x1="18" y1="6" x2="6" y2="18"></line>
-//                                                         <line x1="6" y1="6" x2="18" y2="18"></line>
-//                                                     </svg>
-//                                                 </button>
-//                                                 <button tabIndex="-1" htmlFor="show_more" className="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
-//                                                     <svg className="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-//                                                 </button>
-//                                             </div>
-//                                         </div>
-
-//                                         <div className="md:col-span-1">
-//                                             <label htmlFor="zipcode"className="text-white">IP Status</label>
-//                                             <input type="text" name="zipcode" id="zipcode" className="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" value="" />
-//                                         </div>
-
-//                                         <div className="md:col-span-5">
-//                                             {/* <div className="inline-flex items-center">
-//                                                 <input type="checkbox" name="billing_same" id="billing_same" className="htmlForm-checkbox" />
-//                                                 <label htmlFor="billing_same" className="ml-2">My billing address is different than above.</label>
-//                                             </div> */}
-//                                         </div>
-
-//                                         <div className="md:col-span-2">
-//                                             <label htmlFor="soda"className="text-white">Funding Requirments</label>
-//                                             <div className="h-10 w-28 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-//                                                 <button tabIndex="-1" htmlFor="show_more" className="cursor-pointer outline-none focus:outline-none border-r border-gray-200 transition-all text-gray-500 hover:text-blue-600">
-//                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mx-2" viewBox="0 0 20 20" fill="currentColor">
-//                                                         <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-//                                                     </svg>
-//                                                 </button>
-//                                                 <input name="soda" id="soda" placeholder="0" className="px-2 text-center appearance-none outline-none text-gray-800 w-full bg-transparent" value="0" />
-//                                                 <button tabIndex="-1" htmlFor="show_more" className="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-500 hover:text-blue-600">
-//                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mx-2 fill-current" viewBox="0 0 20 20" fill="currentColor">
-//                                                         <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
-//                                                     </svg>
-//                                                 </button>
-//                                             </div>
-//                                         </div>
-
-//                                         <div className="md:col-span-5 text-right">
-//                                             <div className="inline-flex items-end">
-//                                                 <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
-//                                             </div>
-//                                         </div>
-
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     </div>
-
-//                     {/* <a href="https://www.buymeacoffee.com/dgauderman" target="_blank" className="md:absolute bottom-0 right-0 p-4 float-right">
-//                         <img src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg" alt="Buy Me A Coffee" className="transition-all rounded-full w-14 -rotate-45 hover:shadow-sm shadow-lg ring hover:ring-4 ring-white"/>
-//                     </a> */}
-//                 </div>
-//             </div>
-            
-//         </>
-//     )
-// }
-
-
-// export default Registration
+export default Submission;

@@ -1,12 +1,11 @@
-// import Registration from "../components/Registration";
-import SubmissionPage from "../components/SubmissionPage";
+import Submission from "../components/Registration";
+
 
 function RegistrationPage() {
   return (
     <div>
-      <h1>Registration Page</h1>
-      {/* <Registration /> */}
-      <SubmissionPage />
+      {/* <h1>Registration Page</h1> */}
+      <Submission />
     </div>
   );
 }
