@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 
 
+import PropTypes from 'prop-types';
+
 function Button({ children }) {
   return (
     <div className="flex justify-center items-center px-5 py-2.5 rounded-xl border border-solid shadow-sm backdrop-blur-xl bg-white bg-opacity-0 border-white border-opacity-10">
@@ -10,6 +12,10 @@ function Button({ children }) {
     </div>
   );
 }
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 // function LoginButton() {
 //   return (
